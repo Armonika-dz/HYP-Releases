@@ -1,0 +1,3 @@
+#!ipxe
+dhcp
+sanboot https://github.com/Armonika-dz/HYP-Releases/releases/download/v0.9.1-test/harvester-v1.8.0-amd64-net-install.iso
