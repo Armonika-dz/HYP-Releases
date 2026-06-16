@@ -1,3 +1,6 @@
 #!ipxe
 dhcp
-sanboot https://pub-5fc0b064b7af4dbba5caf67a540d8e6b.r2.dev/harvester-v1.8.0-amd64-net-install.iso
+set base https://pub-5fc0b064b7af4dbba5caf67a540d8e6b.r2.dev
+kernel ${base}/harvester-v1.8.0-vmlinuz-amd64 initrd=harvester-v1.8.0-initrd-amd64 ip=dhcp rd.cos.disable rd.noverifyssl root=live:${base}/harvester-v1.8.0-rootfs-amd64.squashfs console=ttyS1,115200 console=tty1
+initrd ${base}/harvester-v1.8.0-initrd-amd64
+boot
